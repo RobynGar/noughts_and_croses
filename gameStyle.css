@@ -1,0 +1,25 @@
+#header {
+    display: flex;
+    justify-content: center;
+    background-color: #b6e1e0;
+    color: #2b4353;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+body {
+    background-color: #9cd3d3;
+    color: #2b4353;
+    padding: 0;
+    margin: 0;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #e8630a;
+    color: #2b4353;
+}
