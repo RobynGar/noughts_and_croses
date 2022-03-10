@@ -16,9 +16,13 @@ for (i = 0; i < gridElements.length; i++){
         //reassign the text inside each element in the grid to currentPlayer
         event.target.innerText=currentPlayer;
         //if the current player is X and change to an O else change currently current player to X.
-        if(currentPlayer ==="X")
-        {currentPlayer = "O"}
-        else{currentPlayer ="X"}
+        if(currentPlayer ==="X"){
+            currentPlayer = "O"
+            document.getElementById("turn").innerText ="O's";
+        } else {
+            currentPlayer ="X";
+            document.getElementById("turn").innerText ="X's";
+        }
     })
 
 }
