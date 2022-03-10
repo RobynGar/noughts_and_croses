@@ -15,10 +15,37 @@ function checkWin(){
     
     if(document.getElementById("0,0").innerText==="X" && document.getElementById("0,1").innerText==="X" && document.getElementById("0,2").innerText==="X"||document.getElementById("0,0").innerText==="O" && document.getElementById("0,1").innerText==="O" && document.getElementById("0,2").innerText==="O"){
             console.log("U WIN");
+            return true;
             }
     else if(document.getElementById("1,0").innerText==="X" && document.getElementById("1,1").innerText==="X" && document.getElementById("1,2").innerText==="X"||document.getElementById("1,0").innerText==="O" && document.getElementById("1,1").innerText==="O" && document.getElementById("1,2").innerText==="O"){
         console.log("u win")
+        return true;
     }
+    else if(document.getElementById("2,0").innerText==="X" && document.getElementById("2,1").innerText==="X" && document.getElementById("2,2").innerText==="X"||document.getElementById("2,0").innerText==="O" && document.getElementById("2,1").innerText==="O" && document.getElementById("2,2").innerText==="O"){
+        console.log("u win")
+        return true;
+    }
+    else if(document.getElementById("0,0").innerText==="X" && document.getElementById("1,0").innerText==="X" && document.getElementById("2,0").innerText==="X"||document.getElementById("0,0").innerText==="O" && document.getElementById("1,0").innerText==="O" && document.getElementById("2,0").innerText==="O"){
+        console.log("u win")
+        return true;
+    }
+    else if(document.getElementById("0,1").innerText==="X" && document.getElementById("1,1").innerText==="X" && document.getElementById("2,1").innerText==="X"||document.getElementById("0,1").innerText==="O" && document.getElementById("1,1").innerText==="O" && document.getElementById("2,1").innerText==="O"){
+        console.log("u win")
+        return true;
+    }
+    else if(document.getElementById("0,2").innerText==="X" && document.getElementById("1,2").innerText==="X" && document.getElementById("2,2").innerText==="X"||document.getElementById("0,2").innerText==="O" && document.getElementById("1,2").innerText==="O" && document.getElementById("2,2").innerText==="O"){
+        console.log("u win")
+        return true;
+    }
+    else if(document.getElementById("0,0").innerText==="X" && document.getElementById("1,1").innerText==="X" && document.getElementById("2,2").innerText==="X"||document.getElementById("0,0").innerText==="O" && document.getElementById("1,1").innerText==="O" && document.getElementById("2,2").innerText==="O"){
+        console.log("u win")
+        return true;
+    }
+    else if(document.getElementById("0,2").innerText==="X" && document.getElementById("1,1").innerText==="X" && document.getElementById("2,0").innerText==="X"||document.getElementById("0,2").innerText==="O" && document.getElementById("1,1").innerText==="O" && document.getElementById("2,0").innerText==="O"){
+        console.log("u win")
+        return true;
+    }
+    return false;
 }
 
 //loop through each box, avoid writing out each box
@@ -65,99 +92,5 @@ console.log(gridEntries)
 
 
 
-    //Method 1 
-    //Create an empty array 
-    //For loop 
-    //add the index into the empty array 
-    //To win, the array need 3 of either X or O 
-
-    //Method 2 - 2D array 
-    //for loop within a for loop 
-    //An array that contains 3 other array 
-    //each array represent 
-
-
-
-
-
-
-// //A function that checks if the player won 
-// function checkWin(){
-//     //Loop through gridEntries array 
-//     for(i=0;i<gridEntries.length;i++){
-//         //looping through column 
-//         let firstEntry=gridEntries[i][0]
-//         // console.log(firstEntry)
-//         for(j=0;j<gridEntries.length;j++){
-//             if(gridEntries[i][j]==="X" ||gridEntries[i][j]==="O"){
-//             if(gridEntries[i][j]===firstEntry){
-//                 if(j===gridEntries.length-1){
-//                     console.log("win")
-//                     return true;
-//                 }
-//                 continue;
-//             }else{
-//                 break;
-//             }
-//         }
-//     }
-// }
-// }
-
-// function checkColumn(){
-//  for(i=0;i<gridEntries.length;i++){
-//         //looping through column 
-//         console.log(firstEntry)
-//         for(j=0;j<gridEntries.length;j++){
-//             let firstEntry=gridEntries[0][j]
-//             if(gridEntries[i][j]==="X" ||gridEntries[i][j]==="O"){
-//             if(gridEntries[i][j]===firstEntry){
-//                 if(j===gridEntries.length-1){
-//                     console.log("win2")
-//                     return true;
-//                 }
-//                 continue;
-//             }else{
-//                 break;
-//             }
-//         }
-//     }
-
-// }
-// }
-
-            // console.log(gridEntries[i][j])
-            
-            // if(gridEntries[i][j]==="X" ||gridEntries[i][j]==="O"){
-
-            // if(j===0){
-
-            //     lastElement = gridEntries[i][j];
-            //     // console.log(lastElement)
-
-            // }else{
-
-            //     if(lastElement===gridEntries[i][j]){
-
-            //         lastElement=gridEntries[i][j];
-
-            //         if(j===gridEntries[i].length-1){
-            //             console.log("win")
-            //             return true
-            //         }
-
-            //     }else{
-
-            //         if(j===gridEntries[i].length-1){
-            //             break;
-            //         }
-            //     }
-
- 
-        
-    // }
-
-// }
-
-
+   
 
