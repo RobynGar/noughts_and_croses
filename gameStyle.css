@@ -48,3 +48,16 @@ body {
     border-width: 2px;
     font-size: 5em;
 }
+ #button-row {
+    display: flex;
+    justify-content: center;
+    top: 100px;
+    position: absolute;
+    
+    
+} 
+#buttonOnPage{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+} 
