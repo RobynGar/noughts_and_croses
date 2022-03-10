@@ -15,37 +15,79 @@ function checkWin(){
     
     if(document.getElementById("0,0").innerText==="X" && document.getElementById("0,1").innerText==="X" && document.getElementById("0,2").innerText==="X"||document.getElementById("0,0").innerText==="O" && document.getElementById("0,1").innerText==="O" && document.getElementById("0,2").innerText==="O"){
             console.log("U WIN");
+            // Change colour to indicate win
+            document.getElementById("0,0").style.backgroundColor = "#e8630a";
+            document.getElementById("0,1").style.backgroundColor = "#e8630a";
+            document.getElementById("0,2").style.backgroundColor = "#e8630a";
             return true;
             }
     else if(document.getElementById("1,0").innerText==="X" && document.getElementById("1,1").innerText==="X" && document.getElementById("1,2").innerText==="X"||document.getElementById("1,0").innerText==="O" && document.getElementById("1,1").innerText==="O" && document.getElementById("1,2").innerText==="O"){
         console.log("u win")
+        // Change colour to indicate win
+        document.getElementById("1,0").style.backgroundColor = "#e8630a";
+        document.getElementById("1,1").style.backgroundColor = "#e8630a";
+        document.getElementById("1,2").style.backgroundColor = "#e8630a";
         return true;
     }
     else if(document.getElementById("2,0").innerText==="X" && document.getElementById("2,1").innerText==="X" && document.getElementById("2,2").innerText==="X"||document.getElementById("2,0").innerText==="O" && document.getElementById("2,1").innerText==="O" && document.getElementById("2,2").innerText==="O"){
         console.log("u win")
+        // Change colour to indicate win
+        document.getElementById("2,0").style.backgroundColor = "#e8630a";
+        document.getElementById("2,1").style.backgroundColor = "#e8630a";
+        document.getElementById("2,2").style.backgroundColor = "#e8630a";
         return true;
     }
     else if(document.getElementById("0,0").innerText==="X" && document.getElementById("1,0").innerText==="X" && document.getElementById("2,0").innerText==="X"||document.getElementById("0,0").innerText==="O" && document.getElementById("1,0").innerText==="O" && document.getElementById("2,0").innerText==="O"){
         console.log("u win")
+        // Change colour to indicate win
+        document.getElementById("0,0").style.backgroundColor = "#e8630a";
+        document.getElementById("1,0").style.backgroundColor = "#e8630a";
+        document.getElementById("2,0").style.backgroundColor = "#e8630a";
         return true;
     }
     else if(document.getElementById("0,1").innerText==="X" && document.getElementById("1,1").innerText==="X" && document.getElementById("2,1").innerText==="X"||document.getElementById("0,1").innerText==="O" && document.getElementById("1,1").innerText==="O" && document.getElementById("2,1").innerText==="O"){
         console.log("u win")
+        document.getElementById("0,1").style.backgroundColor = "#e8630a";
+        document.getElementById("1,1").style.backgroundColor = "#e8630a";
+        document.getElementById("2,1").style.backgroundColor = "#e8630a";
         return true;
     }
     else if(document.getElementById("0,2").innerText==="X" && document.getElementById("1,2").innerText==="X" && document.getElementById("2,2").innerText==="X"||document.getElementById("0,2").innerText==="O" && document.getElementById("1,2").innerText==="O" && document.getElementById("2,2").innerText==="O"){
         console.log("u win")
+        document.getElementById("0,2").style.backgroundColor = "#e8630a";
+        document.getElementById("1,2").style.backgroundColor = "#e8630a";
+        document.getElementById("2,2").style.backgroundColor = "#e8630a";
         return true;
     }
     else if(document.getElementById("0,0").innerText==="X" && document.getElementById("1,1").innerText==="X" && document.getElementById("2,2").innerText==="X"||document.getElementById("0,0").innerText==="O" && document.getElementById("1,1").innerText==="O" && document.getElementById("2,2").innerText==="O"){
         console.log("u win")
+        document.getElementById("0,0").style.backgroundColor = "#e8630a";
+        document.getElementById("1,1").style.backgroundColor = "#e8630a";
+        document.getElementById("2,2").style.backgroundColor = "#e8630a";
         return true;
     }
     else if(document.getElementById("0,2").innerText==="X" && document.getElementById("1,1").innerText==="X" && document.getElementById("2,0").innerText==="X"||document.getElementById("0,2").innerText==="O" && document.getElementById("1,1").innerText==="O" && document.getElementById("2,0").innerText==="O"){
         console.log("u win")
+        document.getElementById("0,2").style.backgroundColor = "#e8630a";
+        document.getElementById("1,1").style.backgroundColor = "#e8630a";
+        document.getElementById("2,0").style.backgroundColor = "#e8630a";
         return true;
     }
     return false;
+}
+
+const checkDraw = function(){
+    // Placeholder 
+    let result = true;
+    // Loop over grid array
+    for (i = 0; i < gridEntries.length; i++){
+        for (j = 0; j < gridEntries.length; j++){
+            if (gridEntries[i][j] === undefined){
+                result = false;
+            }
+        }
+    }
+    return result;
 }
 
 //loop through each box, avoid writing out each box
@@ -65,6 +107,12 @@ for (i = 0; i < gridElements.length; i++){
             if(checkWin()){
                 const h3id= document.getElementById("h3id"); 
                 h3id.innerHTML= `Game over- Player ${currentPlayer} won`
+            } else {
+                if (checkDraw()) {
+                    console.log("stalemate")
+                    const h3id= document.getElementById("h3id"); 
+                    h3id.innerHTML= `Stalemate`;
+                };
             }
 
 
