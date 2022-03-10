@@ -3,7 +3,6 @@
     justify-content: center;
     background-color: #b6e1e0;
     color: #2b4353;
-    position: absolute;
     top: 0;
     width: 100%;
 }
@@ -16,10 +15,36 @@ body {
 }
 
 #footer {
-    position: absolute;
     bottom: 0;
     height: 60px;
     width: 100%;
     background-color: #e8630a;
     color: #2b4353;
+    position: fixed;
+}
+#gridOnPage{
+    display: flex;
+    justify-content:center;
+    height: 120px;
+}
+
+#grid{
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    width: 100%;
+    height: 200%;
+    justify-content: space-around;
+    margin: 20px;
+    
+    
+}
+.box{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: solid;
+    border-width: 2px;
+    
 }

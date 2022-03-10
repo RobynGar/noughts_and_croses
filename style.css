@@ -13,13 +13,13 @@ body {
 }
 
 #footer {
-    position: absolute;
     bottom: 0;
     height: 60px;
     width: 100%;
     background-color: #e8630a;
     color: #2b4353;
 }
+
 
 #button-row {
     display: flex;
