@@ -52,10 +52,26 @@ body {
     display: flex;
     justify-content: center;
     top: 100px;
-    position: absolute;
-    
+    position: absolute; 
+} 
+ /* #start-game-btn {
+    display: flex;
+    justify-content: center;
+    top: 105px; 
+} */
+#button-bot {
+    display: flex;
+    justify-content: center;
+    top: 125px;
+    padding: 8px;
+    position:absolute;
     
 } 
+#botButtonPage{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
 #buttonOnPage{
     display: flex;
     justify-content: center;

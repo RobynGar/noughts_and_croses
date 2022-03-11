@@ -26,7 +26,11 @@ body {
     display: flex;
     justify-content: center;
 }
-
+#button-bot {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+} 
 #game-rules {
     border-style: solid;
     border-color: #e8630a;
