@@ -61,3 +61,10 @@ body {
     justify-content: center;
     align-items: flex-end;
 } 
+main p{
+    position:absolute;
+   bottom:200px; 
+   right: 500px;
+   font-size: 1.5em;
+
+}
