@@ -5,6 +5,19 @@
     color: #2b4353;
     top: 0;
     width: 100%;
+    border-bottom: solid;
+    border-color: #e8630a;
+}
+#PlayerTwoName{
+    margin-top: 10px;
+    border: none;
+}
+#PlayerOneName{
+    border: none;
+}
+#submitButton{
+    margin-top: 10px;
+    margin-left: 160px;
 }
 
 body {

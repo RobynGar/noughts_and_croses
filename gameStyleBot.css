@@ -5,6 +5,8 @@
     color: #2b4353;
     top: 0;
     width: 100%;
+    border-bottom: solid;
+    border-color: #e8630a;
 }
 
 body {

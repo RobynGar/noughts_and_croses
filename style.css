@@ -3,6 +3,8 @@
     justify-content: center;
     background-color: #b6e1e0;
     color: #2b4353;
+    border-bottom: solid;
+    border-color: #e8630a;
 }
 
 body {
@@ -22,14 +24,16 @@ body {
 } */
 
 
-#button-row {
+#button-restart {
     display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 #button-bot {
     display: flex;
     justify-content: center;
     padding: 8px;
+    text-decoration: none;
 } 
 #game-rules {
     border-style: solid;
@@ -40,4 +44,13 @@ body {
     justify-content: center;
     margin: 5%;
     padding: 25px;
+    padding-left: 50px;
+}
+.button{
+    background-color: #e8630a;
+    color:#2b4353;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    
 }
