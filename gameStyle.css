@@ -14,14 +14,14 @@ body {
     margin: 0;
 }
 
-#footer {
+/* #footer {
     bottom: 0;
     height: 60px;
     width: 100%;
     background-color: #e8630a;
     color: #2b4353;
     position: fixed;
-}
+} */
 #gridOnPage{
     display: flex;
     justify-content:center;
@@ -33,12 +33,10 @@ body {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
-    width: 100%;
+    width: 60%;
     height: 200%;
     justify-content: space-around;
     margin: 20px;
-    
-    
 }
 .box{
     width: 100%;
@@ -48,32 +46,41 @@ body {
     border-width: 2px;
     font-size: 5em;
 }
- #button-row {
-    display: flex;
-    justify-content: center;
-    top: 100px;
-    position: absolute; 
+ #button-restart {
+    top: 130px;
+    padding-top: 20px;
+    padding-right: 40px;
+    position: relative; 
 } 
- /* #start-game-btn {
-    display: flex;
-    justify-content: center;
-    top: 105px; 
-} */
 #button-bot {
-    display: flex;
-    justify-content: center;
     top: 125px;
-    padding: 8px;
-    position:absolute;
-    
+    padding: 5px;
+    padding-right: 40px;
+    position:relative;
 } 
 #botButtonPage{
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: flex-end;
+    padding: 5px;
 }
 #buttonOnPage{
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: flex-end;
+    padding: 5px;
 } 
+h3{
+    padding: 10px;
+}
+form{
+    padding-left: 25px;
+}
+.button{
+    background-color: #e8630a;
+    color:#2b4353;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    
+}
