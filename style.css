@@ -5,6 +5,7 @@
     color: #2b4353;
     border-bottom: solid;
     border-color: #e8630a;
+    font-family: Chalkduster, Marker Felt, Noto Sans, Courier;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     color: #2b4353;
     padding: 0;
     margin: 0;
+    font-family: Chalkduster, Marker Felt, Noto Sans, Courier;
 }
 
 /* #footer {
