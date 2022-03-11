@@ -10,6 +10,7 @@ const gridElements = document.getElementsByClassName("box");
 
 
 let currentPlayer= "X";
+let bot = "O";
 
 function checkWin(){
     
@@ -90,6 +91,33 @@ const checkDraw = function(){
     return result;
 }
 
+const botTurn = function(){
+    // Variable to determine whether bot is "thinking"
+    let deciding = true;
+    // Indices for bot choice
+    let choice = [0, 0];
+    let choiceString = "";
+    // Loop runs while bot is deciding
+    while(deciding){
+        // Generate random indices from 0-2
+        choice[0] = Math.floor(Math.random() * 3);
+        choice[1] = Math.floor(Math.random() * 3);
+        console.log(choice);
+        console.log(gridEntries);
+        // Check if option grid entry is empty
+        if (gridEntries[choice[0]][choice[1]] === undefined){
+            // Convert choice to string id
+            choiceString = String(choice[0]) + "," + String(choice[1]);
+            // Assign grid entry
+            document.getElementById(choiceString).innerText = bot;
+            gridEntries[choice[0]][choice[1]] = bot;
+            console.log(gridEntries[choice[0]][choice[1]]);
+            // No longer deciding
+            deciding = false;
+        }
+    }
+}
+
 //loop through each box, avoid writing out each box
 for (i = 0; i < gridElements.length; i++){
     //each box is the element in the array
@@ -102,6 +130,7 @@ for (i = 0; i < gridElements.length; i++){
             event.target.innerText=currentPlayer;
             let index = event.target.id.split(",")  //Obtains index from the html id 
             gridEntries[parseInt(index[0])][parseInt(index[1])]= currentPlayer
+            setTimeout(botTurn, 1e3);
 
             //This calls the function to check whether the user won 
             if(checkWin()){
@@ -116,14 +145,14 @@ for (i = 0; i < gridElements.length; i++){
             }
 
 
-            if(currentPlayer ==="X"){
-                currentPlayer = "O"
-                document.getElementById("turn").innerText ="O's";
+            // if(currentPlayer ==="X"){
+            //     currentPlayer = "O"
+            //     document.getElementById("turn").innerText ="O's";
                 
-            } else {
-                currentPlayer ="X";
-                document.getElementById("turn").innerText ="X's";
-            }
+            // } else {
+            //     currentPlayer ="X";
+            //     document.getElementById("turn").innerText ="X's";
+            // }
     
         }
         //if the current player is X and change to an O else change currently current player to X.
