@@ -92,6 +92,11 @@ const checkDraw = function(){
 }
 
 const botTurn = function(){
+
+    
+
+
+
     // Variable to determine whether bot is "thinking"
     let deciding = true;
     // Indices for bot choice
@@ -116,6 +121,18 @@ const botTurn = function(){
             deciding = false;
         }
     }
+    if(checkWin()){
+        const h3id= document.getElementById("h3id"); 
+        h3id.innerHTML= `Game over- Player ${bot} won`
+    } else if (checkDraw()) {
+            console.log("stalemate")
+            const h3id= document.getElementById("h3id"); 
+            h3id.innerHTML= `Stalemate`;
+    }else{
+        document.getElementById("turn").innerText ="X's";
+
+    }
+
 }
 
 //loop through each box, avoid writing out each box
@@ -130,18 +147,18 @@ for (i = 0; i < gridElements.length; i++){
             event.target.innerText=currentPlayer;
             let index = event.target.id.split(",")  //Obtains index from the html id 
             gridEntries[parseInt(index[0])][parseInt(index[1])]= currentPlayer
-            setTimeout(botTurn, 1e3);
 
             //This calls the function to check whether the user won 
             if(checkWin()){
                 const h3id= document.getElementById("h3id"); 
                 h3id.innerHTML= `Game over- Player ${currentPlayer} won`
-            } else {
-                if (checkDraw()) {
+            } else if (checkDraw()) {
                     console.log("stalemate")
                     const h3id= document.getElementById("h3id"); 
                     h3id.innerHTML= `Stalemate`;
-                };
+            }else{
+                document.getElementById("turn").innerText ="O's";
+                setTimeout(botTurn, 1e3)
             }
 
 
@@ -161,6 +178,8 @@ for (i = 0; i < gridElements.length; i++){
 }
 console.log(gridEntries)
 
+//Extentions: 
+//1) Change the message 
 
 
 
