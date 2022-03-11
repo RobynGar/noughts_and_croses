@@ -11,6 +11,9 @@ const gridElements = document.getElementsByClassName("box");
 
 let currentPlayer= "X";
 
+
+let playerName= document.getElementById("PlayerOneName").value;
+
 function checkWin(){
     
     if(document.getElementById("0,0").innerText==="X" && document.getElementById("0,1").innerText==="X" && document.getElementById("0,2").innerText==="X"||document.getElementById("0,0").innerText==="O" && document.getElementById("0,1").innerText==="O" && document.getElementById("0,2").innerText==="O"){
@@ -106,7 +109,7 @@ for (i = 0; i < gridElements.length; i++){
             //This calls the function to check whether the user won 
             if(checkWin()){
                 const h3id= document.getElementById("h3id"); 
-                h3id.innerHTML= `Game over- Player ${currentPlayer} won`
+                h3id.innerHTML= `Game over- ${playerName} won`
             } else {
                 if (checkDraw()) {
                     console.log("stalemate")
@@ -116,24 +119,43 @@ for (i = 0; i < gridElements.length; i++){
             }
 
 
-            if(currentPlayer ==="X"){
+            if(currentPlayer ==="X" || playerName === document.getElementById("PlayerOneName").value){
                 currentPlayer = "O"
-                document.getElementById("turn").innerText ="O's";
+                playerName=document.getElementById("PlayerTwoName").value;
+                document.getElementById("turn").innerText = playerName;
                 
             } else {
                 currentPlayer ="X";
-                document.getElementById("turn").innerText ="X's";
+                playerName = document.getElementById("PlayerOneName").value
+                document.getElementById("turn").innerText = playerName;
             }
     
         }
         //if the current player is X and change to an O else change currently current player to X.
         
     })
+
 }
 console.log(gridEntries)
 
 
+function Player(){
+    
+    const playerOne = document.getElementById("PlayerOneName").value;
+    document.getElementById("turn").innerText=playerOne;
+   
+    const playerTwo = document.getElementById("PlayerTwoName").value;
+    console.log(playerOne);
+    console.log(playerTwo);
 
+    // if (playerName === document.getElementById("PlayerOneName").value ){
+    //     playerName=document.getElementById("PlayerTwoName").value;
+    //     document.getElementById("turn").innerText = playerName;
+    // }else {
+    //     playerName = document.getElementById("PlayerOneName").value
+    //     document.getElementById("turn").innerText = playerName;
+    // }
+}
 
 
 
